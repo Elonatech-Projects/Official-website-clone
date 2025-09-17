@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #11253d;
+  --color-text-light: #FFFFFF;
+  --color-accent: #b60903;
+}
+
+/* 
+* {
+  border: 1px solid red;
+} */
