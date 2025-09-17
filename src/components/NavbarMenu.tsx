@@ -4,19 +4,22 @@ import Link from "next/link";
 // Define dropdown items
 const dropdownItems = {
   solutions: [
-    { name: "Enterprise Solutions", href: "#" },
-    { name: "Cloud Services", href: "#" },
-    { name: "Consulting", href: "#" },
+    { name: "Tech Solutions", href: "#" },
+    { name: "Digital sulutions", href: "#" },
+    { name: "Sales/Supply", href: "#" },
   ],
   products: [
-    { name: "Software", href: "#" },
-    { name: "Hardware", href: "#" },
-    { name: "Accessories", href: "#" },
+    { name: "Shop", href: "#" },
+    { name: "Computers", href: "#" },
+    { name: "Printers", href: "#" },
+    { name: "Office Equipments", href: "#" },
+    { name: "POS Systems", href: "#" },
+    { name: "Network Devices", href: "#" },
   ],
   support: [
-    { name: "Documentation", href: "#" },
-    { name: "Tutorials", href: "#" },
-    { name: "Contact Support", href: "#" },
+    { name: "Technical support", href: "#" },
+    { name: "Network support", href: "#" },
+    { name: "Remote Support", href: "#" },
   ],
 };
 
@@ -51,7 +54,7 @@ const NavbarMenu = ({
       </button>
 
       {openDropdown === title && (
-        <div className="absolute top-full left-0 mt-2 w-48 bg-[#3c5678] rounded-md shadow-lg py-2 z-50">
+        <div className="absolute top-full left-0 mt-2 w-50 bg-[#3c5678] rounded-md shadow-lg py-2 z-50">
           {items.map((item, index) => (
             <Link
               key={index}
