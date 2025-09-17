@@ -7,17 +7,18 @@ const Header = () => {
     <header className="bg-background shadow-sm py-6 px-4 flex items-center justify-between gap-10">
       <a href="#" className="flex-shrink-0">
         <Image
-          src={"/images/logo.png"}
+          src="/images/logo.png"
           alt="Elonatech Logo"
           width={200}
           height={150}
-          className="object-contain"
+          className="h-auto w-40 object-contain"
         />
       </a>
 
       {/* Navbar */}
       <Navbar />
 
+      {/* Social links */}
       <div className="flex-shrink-0 flex gap-3 mr-3 [&>*]:transition-transform [&>*]:duration-200 [&>*]:ease-in-out [&>*]:hover:scale-110 [&>*]:h-10 [&>*]:w-10 md:[&>*]:h-20 md:[&>*]:w-20">
         <SocialIcon
           target="_blank"
