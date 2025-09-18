@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import React, { useState, useEffect } from "react";
 
 interface Slide {
@@ -101,7 +102,7 @@ const Hero = () => {
           >
             {/* Background Image with gradient overlay */}
             <div className="absolute inset-0">
-              <img
+              <Image
                 src={slide.src}
                 className="w-full h-full object-cover"
                 alt={slide.alt}

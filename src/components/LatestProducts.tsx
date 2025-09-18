@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { Star } from "lucide-react";
+import Image from "next/image";
 
 type Product = {
   id: number;
@@ -40,7 +41,7 @@ const LatestProducts: React.FC = () => {
               className="border rounded-lg shadow-sm p-4 flex flex-col justify-between"
             >
               {/* Image */}
-              <img
+              <Image
                 src={product.image}
                 alt={product.name}
                 className="h-40 w-full object-contain mb-3"

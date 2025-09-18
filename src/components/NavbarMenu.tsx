@@ -1,7 +1,6 @@
 import {
   ChevronDown,
   ChevronRight,
-  House,
   Network,
   Shield,
   Database,
@@ -11,7 +10,7 @@ import {
   Camera,
 } from "lucide-react";
 import Link from "next/link";
-import { useState, useRef, useEffect } from "react";
+import { useState } from "react";
 
 // Define the type for menu items to support deep nesting and icons
 type MenuItem = {

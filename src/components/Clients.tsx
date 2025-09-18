@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import React, { useState, useEffect } from "react";
 
 const ClientsCarousel: React.FC = () => {
@@ -83,7 +84,7 @@ const ClientsCarousel: React.FC = () => {
                     key={clientIndex}
                     className="flex justify-center items-center h-28 sm:h-32 w-1/4 bg-white rounded-lg shadow-md hover:shadow-lg transition transform hover:-translate-y-1 p-4"
                   >
-                    <img
+                    <Image
                       src={src}
                       alt={`Client ${groupIndex * 4 + clientIndex + 1}`}
                       className="max-h-16 w-auto object-contain"

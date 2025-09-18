@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const FreeConsultation: React.FC = () => {
@@ -26,7 +27,7 @@ const FreeConsultation: React.FC = () => {
 
         {/* Right Side - Image */}
         <div className="md:w-1/2 flex justify-center md:justify-end">
-          <img
+          <Image
             src="/images/people/Ceo1.png"
             alt="Consultation"
             className="w-64 md:w-80 object-contain"

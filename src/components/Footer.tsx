@@ -10,22 +10,14 @@ import {
   Youtube,
   Twitter,
   MessageCircle,
-  Lock,
-  Unlock,
 } from "lucide-react";
-import eloa2 from "./caption/Elonatech icon.png";
+import Image from "next/image";
 
 const Footer: React.FC = () => {
-  const [currentAdmin, setCurrentAdmin] = useState("");
   const [email, setEmail] = useState("");
   const [mailchimp, setMailChimp] = useState("");
   const [facebookSrc, setFacebookSrc] = useState("");
   const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const auth = JSON.parse(localStorage.getItem("token") as string);
-    setCurrentAdmin(auth);
-  }, []);
 
   // Facebook SDK
   useEffect(() => {
@@ -103,7 +95,7 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-10">
         {/* Company Info */}
         <div className="md:col-span-3">
-          <img
+          <Image
             src="/images/logo.png"
             alt="Elonatech Logo"
             className="w-20 mb-3"

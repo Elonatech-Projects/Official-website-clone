@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import React, { useState, useEffect } from "react";
 
 interface Testimonial {
@@ -149,7 +150,7 @@ const TestimonialsCarousel: React.FC = () => {
               >
                 <div className="flex flex-col items-center text-center p-6 md:p-8 bg-white/5 rounded-xl backdrop-blur-md shadow-xl">
                   <div className="mb-5">
-                    <img
+                    <Image
                       src={t.image}
                       alt={t.name}
                       className="w-24 h-24 md:w-28 md:h-28 rounded-full object-cover border-4 border-red-600"
@@ -172,11 +173,11 @@ const TestimonialsCarousel: React.FC = () => {
 
                     <div className="relative italic text-lg leading-relaxed">
                       <span className="absolute -left-5 -top-3 text-3xl text-red-600 font-bold">
-                        "
+                        &quot;
                       </span>
                       <p>{t.content}</p>
                       <span className="absolute -right-5 -bottom-3 text-3xl text-red-600 font-bold">
-                        "
+                        &quot;
                       </span>
                     </div>
                   </div>
