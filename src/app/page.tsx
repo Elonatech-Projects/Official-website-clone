@@ -1,4 +1,5 @@
 import About from "@/components/About";
+import ClientsCarousel from "@/components/Clients";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import ServicesGrid from "@/components/Services";
@@ -12,6 +13,7 @@ export default function Home() {
         <About />
         <ServicesGrid />
       </div>
+      <ClientsCarousel />
     </>
   );
 }

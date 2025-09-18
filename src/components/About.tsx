@@ -14,33 +14,60 @@ const About: React.FC = () => {
 
       {/* Feature Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-        <div className="bg-gray-900 text-white p-6 rounded-lg shadow-lg">
-          <h2 className="text-2xl font-semibold mb-4">
-            Website and App Applications
-          </h2>
-          <p className="mb-6">
-            At Elonatech, we build Apps that are not only visually beautiful but
-            functionally effective. Our team of web strategists, designers,
-            developers, and project managers work together to help clients meet
-            their business objective.
-          </p>
-          <button className="bg-red-600 text-white px-6 py-2 rounded hover:bg-red-700 transition">
-            Read More
-          </button>
+        {/* Card 1 */}
+        <div
+          className="relative bg-gray-900 text-white p-6 rounded-lg shadow-lg bg-cover bg-center"
+          style={{
+            backgroundImage:
+              "url('https://res.cloudinary.com/elonatech/image/upload/v1709804949/homePage/main/Scalable_IT_left-min_c8po5r.png')",
+          }}
+        >
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-black/70 rounded-lg"></div>
+
+          {/* Content */}
+          <div className="relative z-10">
+            <h2 className="text-2xl font-semibold mb-4">
+              Website and App Applications
+            </h2>
+            <p className="mb-6">
+              At Elonatech, we build Apps that are not only visually beautiful
+              but functionally effective. Our team of web strategists,
+              designers, developers, and project managers work together to help
+              clients meet their business objective.
+            </p>
+            <button className="bg-red-600 text-white px-6 py-2 rounded hover:bg-red-700 transition">
+              Read More
+            </button>
+          </div>
         </div>
-        <div className="bg-gray-900 text-white p-6 rounded-lg shadow-lg">
-          <h2 className="text-2xl font-semibold mb-4">
-            Flexible, Scalable IT Solutions
-          </h2>
-          <p className="mb-6">
-            Having the right company behind your system is as important as the
-            network itself. Implementing a well-designed, secured enterprise
-            network and utilizing the right combination of IT solutions will
-            drive your business to the desired level.
-          </p>
-          <button className="bg-red-600 text-white px-6 py-2 rounded hover:bg-red-700 transition">
-            Read More
-          </button>
+
+        {/* Card 2 */}
+        <div
+          className="relative bg-gray-900 text-white p-6 rounded-lg shadow-lg bg-cover bg-center"
+          style={{
+            backgroundImage:
+              "url('https://res.cloudinary.com/elonatech/image/upload/v1709804949/homePage/main/Scalable_IT_right-min_cjn5fe.png')",
+          }}
+        >
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-black/70 rounded-lg"></div>
+
+          {/* Content */}
+          <div className="relative z-10">
+            <h2 className="text-2xl font-semibold mb-4">
+              Flexible, Scalable IT Solutions
+            </h2>
+            <p className="mb-6">
+              Having the right company behind your system is as important as the
+              network itself. Implementing a well-designed, secured enterprise
+              network and utilizing the right combination of IT solutions will
+              drive your business to the desired level.
+            </p>
+            <button className="bg-red-600 text-white px-6 py-2 rounded hover:bg-red-700 transition">
+              Read More
+            </button>
+          </div>
         </div>
       </div>
 
