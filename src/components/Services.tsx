@@ -1,163 +1,125 @@
-import Image from "next/image";
 import React from "react";
+import Image from "next/image";
 
-const Services: React.FC = () => {
+interface ServiceCardProps {
+  title: string;
+  description: string;
+  image: string;
+  icon: React.ReactNode;
+}
+
+const ServiceCard: React.FC<ServiceCardProps> = ({
+  title,
+  description,
+  image,
+  icon,
+}) => {
   return (
-    <section className="py-12 px-4 md:px-8 lg:px-16 bg-white max-w-[65%] m-auto flex flex-col items-center">
-      {/* What We Do Best Section */}
-      <div className="mb-12 w-full">
-        <h2 className="text-3xl font-bold text-center text-black mb-6">
-          What We Do Best
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div className="group bg-blue-700 text-white p-6 rounded-lg shadow-lg flex flex-col items-center text-center relative overflow-hidden">
-            <Image
-              src="/images/web-design.jpg"
-              width={150}
-              height={100}
-              alt="Web Design & Development"
-              className="mb-4"
-            />
-            <h3 className="text-xl font-semibold mb-2">
-              WEB DESIGN & DEVELOPMENT
-            </h3>
-            <p className="mb-4">
-              Innovative and user-friendly website solutions.
-            </p>
-            <button className="absolute bottom-0 left-0 w-full bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition-transform duration-300 transform translate-y-full group-hover:translate-y-0">
-              See More
-            </button>
-          </div>
-          <div className="group bg-blue-700 text-white p-6 rounded-lg shadow-lg flex flex-col items-center text-center relative overflow-hidden">
-            <Image
-              src="/images/digital-marketing.jpg"
-              width={150}
-              height={100}
-              alt="Digital Marketing"
-              className="mb-4"
-            />
-            <h3 className="text-xl font-semibold mb-2">DIGITAL MARKETING</h3>
-            <p className="mb-4">
-              With Digital marketing, we have successfully changed the way
-              brands and businesses use technology for marketing the Digital
-              platforms are.
-            </p>
-            <button className="absolute bottom-0 left-0 w-full bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition-transform duration-300 transform translate-y-full group-hover:translate-y-0">
-              See More
-            </button>
-          </div>
-          <div className="group bg-blue-700 text-white p-6 rounded-lg shadow-lg flex flex-col items-center text-center relative overflow-hidden">
-            <Image
-              src="/images/graphics-branding.jpg"
-              width={150}
-              height={100}
-              alt="Graphics & Branding"
-              className="mb-4"
-            />
-            <h3 className="text-xl font-semibold mb-2">GRAPHICS & BRANDING</h3>
-            <p className="mb-4">
-              Creative designs to enhance your brand identity.
-            </p>
-            <button className="absolute bottom-0 left-0 w-full bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition-transform duration-300 transform translate-y-full group-hover:translate-y-0">
-              See More
-            </button>
-          </div>
-          <div className="group bg-blue-700 text-white p-6 rounded-lg shadow-lg flex flex-col items-center text-center relative overflow-hidden">
-            <Image
-              src="/images/network-engineering.jpg"
-              width={150}
-              height={100}
-              alt="Network Engineering / Administration"
-              className="mb-4"
-            />
-            <h3 className="text-xl font-semibold mb-2">
-              NETWORK ENGINEERING / ADMINISTRATION
-            </h3>
-            <p className="mb-4">Expert management of network infrastructure.</p>
-            <button className="absolute bottom-0 left-0 w-full bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition-transform duration-300 transform translate-y-full group-hover:translate-y-0">
-              See More
-            </button>
-          </div>
-          <div className="group bg-blue-700 text-white p-6 rounded-lg shadow-lg flex flex-col items-center text-center relative overflow-hidden">
-            <Image
-              src="/images/computer-engineering.jpg"
-              width={150}
-              height={100}
-              alt="Computer Engineering"
-              className="mb-4"
-            />
-            <h3 className="text-xl font-semibold mb-2">COMPUTER ENGINEERING</h3>
-            <p className="mb-4">Advanced hardware and software solutions.</p>
-            <button className="absolute bottom-0 left-0 w-full bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition-transform duration-300 transform translate-y-full group-hover:translate-y-0">
-              See More
-            </button>
-          </div>
-          <div className="group bg-blue-700 text-white p-6 rounded-lg shadow-lg flex flex-col items-center text-center relative overflow-hidden">
-            <Image
-              src="/images/access-control.jpg"
-              width={150}
-              height={100}
-              alt="Access Control & Surveillance"
-              className="mb-4"
-            />
-            <h3 className="text-xl font-semibold mb-2">
-              ACCESS CONTROL & SURVEILLANCE
-            </h3>
-            <p className="mb-4">
-              Secure and monitor your premises effectively.
-            </p>
-            <button className="absolute bottom-0 left-0 w-full bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition-transform duration-300 transform translate-y-full group-hover:translate-y-0">
-              See More
-            </button>
-          </div>
-          <div className="group bg-blue-700 text-white p-6 rounded-lg shadow-lg flex flex-col items-center text-center relative overflow-hidden">
-            <Image
-              src="/images/animations-video.jpg"
-              width={150}
-              height={100}
-              alt="Animations & Video"
-              className="mb-4"
-            />
-            <h3 className="text-xl font-semibold mb-2">ANIMATIONS & VIDEO</h3>
-            <p className="mb-4">Engaging visual content for your brand.</p>
-            <button className="absolute bottom-0 left-0 w-full bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition-transform duration-300 transform translate-y-full group-hover:translate-y-0">
-              See More
-            </button>
-          </div>
-          <div className="group bg-blue-700 text-white p-6 rounded-lg shadow-lg flex flex-col items-center text-center relative overflow-hidden">
-            <Image
-              src="/images/livestreaming.jpg"
-              width={150}
-              height={100}
-              alt="Livestreaming & Videoconferencing"
-              className="mb-4"
-            />
-            <h3 className="text-xl font-semibold mb-2">
-              LIVESTREAMING & VIDEOCONFERENCING
-            </h3>
-            <p className="mb-4">Seamless virtual communication solutions.</p>
-            <button className="absolute bottom-0 left-0 w-full bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition-transform duration-300 transform translate-y-full group-hover:translate-y-0">
-              See More
-            </button>
-          </div>
-          <div className="group bg-blue-700 text-white p-6 rounded-lg shadow-lg flex flex-col items-center text-center relative overflow-hidden">
-            <Image
-              src="/images/consulting.jpg"
-              width={150}
-              height={100}
-              alt="Consulting"
-              className="mb-4"
-            />
-            <h3 className="text-xl font-semibold mb-2">CONSULTING</h3>
-            <p className="mb-4">Expert advice to optimize your IT strategy.</p>
-            <button className="absolute bottom-0 left-0 w-full bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition-transform duration-300 transform translate-y-full group-hover:translate-y-0">
-              See More
-            </button>
-          </div>
-        </div>
+    <div className="relative group overflow-hidden rounded-xl shadow-md">
+      {/* Background Image */}
+      <Image
+        src={image}
+        alt={title}
+        width={400}
+        height={300}
+        className="w-full h-64 object-cover"
+      />
+
+      {/* Default Overlay */}
+      <div className="absolute inset-0 bg-blue-900/70 flex flex-col items-center justify-center text-white text-center px-4 transition-opacity duration-300 group-hover:opacity-0">
+        <div className="text-4xl mb-2">{icon}</div>
+        <h3 className="font-semibold uppercase">{title}</h3>
       </div>
-    </section>
+
+      {/* Hover Overlay */}
+      <div className="absolute inset-0 bg-blue-900/90 text-white flex flex-col items-center justify-center text-center px-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <h3 className="font-semibold uppercase mb-2">{title}</h3>
+        <p className="text-sm mb-4">{description}</p>
+        <button className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-md">
+          See More
+        </button>
+      </div>
+    </div>
   );
 };
 
-export default Services;
+export default function ServicesGrid() {
+  const services = [
+    {
+      title: "Web Design & Development",
+      description:
+        "At Elonatech, we build websites that are not only visually beautiful but also functionally effective. Our team of web strategists.",
+      image: "/images/services/web_design.png",
+      icon: <span>🌐</span>,
+    },
+    {
+      title: "Digital Marketing",
+      description:
+        "With Digital marketing, we have successfully changed the way brands and businesses use technology for marketing.",
+      image: "/images/services/digital_marketing.png",
+      icon: <span>📈</span>,
+    },
+    {
+      title: "Graphics & Branding",
+      description:
+        "Brand identity is not limited to a specific mark or name. Branding can incorporate multiple touch points...",
+      image: "/images/services/graphics_and_branding.png",
+      icon: <span>🎨</span>,
+    },
+    {
+      title: "Network Engineering/Administration",
+      description:
+        "Responsible for installing, implementing, and maintaining business applications for organizations...",
+      image: "/images/services/networking.png",
+      icon: <span>🔌</span>,
+    },
+    {
+      title: "Computer Engineering",
+      description:
+        "While computer hardware configurations vary widely, we work on a broad range of hardware systems..",
+      image: "/images/services/computer_engineering.png",
+      icon: <span>💻</span>,
+    },
+    {
+      title: "Access Control & Surveillance",
+      description:
+        "While network security should always be a prime concern for your business, you shouldn’t neglect your physical security either...",
+      image: "/images/services/survellance.png",
+      icon: <span>📹</span>,
+    },
+    {
+      title: "Animations & Video Graphics",
+      description:
+        "Animations have the power to convey complex concepts, evoke emotions, and leave a lasting impression on your audience.",
+      image: "/images/services/animation.png",
+      icon: <span>🎬</span>,
+    },
+    {
+      title: "Livestreaming & Video Conferencing",
+      description:
+        "As we adjust to the new normal, everyone is moving their social life online. Happy hours, concerts, events, seminars, late night talk shows...",
+      image: "/images/services/live_streaming.png",
+      icon: <span>🎥</span>,
+    },
+    {
+      title: "Consulting",
+      description:
+        "We help brands & businesses gain a competitive advantage in the connected world helping business find the best solutions. With over 12 years of experience...",
+      image: "/images/services/consulting.png",
+      icon: <span>💼</span>,
+    },
+  ];
+
+  return (
+    <section className="py-12 px-4 md:px-8 lg:px-16 bg-white w-full flex flex-col items-center">
+      <h1 className="text-4xl font-bold text-center text-black border-b-4 border-red-600 inline-block mx-auto pb-2 mb-8">
+        What We Do Best
+      </h1>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 ">
+        {services.map((service, index) => (
+          <ServiceCard key={index} {...service} />
+        ))}
+      </div>
+    </section>
+  );
+}
