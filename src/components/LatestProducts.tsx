@@ -42,6 +42,8 @@ const LatestProducts: React.FC = () => {
             >
               {/* Image */}
               <Image
+                width={200}
+                height={200}
                 src={product.image}
                 alt={product.name}
                 className="h-40 w-full object-contain mb-3"

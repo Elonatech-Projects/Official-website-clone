@@ -7,7 +7,7 @@ const ClientsCarousel: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const allClients = [
-    "https://res.cloudinary.com/elonatech/image/upload/v1707234681/homePage/clientLogo/amp-featured-image_fincna.png",
+    "https://res.cloudinary.com/elonatech/image/upload/v1707234681/homePage/clientLogo/amp-featured-image_fincna.png", // Removed trailing space
     "https://res.cloudinary.com/elonatech/image/upload/v1707234684/homePage/clientLogo/lsg_iph8mx.png",
     "https://res.cloudinary.com/elonatech/image/upload/v1707234695/homePage/clientLogo/hv_nzxyt1.png",
     "https://res.cloudinary.com/elonatech/image/upload/v1707234749/homePage/clientLogo/kosofe_yuqg5x.png",
@@ -85,6 +85,8 @@ const ClientsCarousel: React.FC = () => {
                     className="flex justify-center items-center h-28 sm:h-32 w-1/4 bg-white rounded-lg shadow-md hover:shadow-lg transition transform hover:-translate-y-1 p-4"
                   >
                     <Image
+                      width={200} // Consider making this 100 or 150 based on max-h-16
+                      height={200}
                       src={src}
                       alt={`Client ${groupIndex * 4 + clientIndex + 1}`}
                       className="max-h-16 w-auto object-contain"

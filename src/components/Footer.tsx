@@ -13,6 +13,18 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 
+// Define a type for the window object to include FB
+declare global {
+  interface Window {
+    FB: {
+      init: (options: { xfbml: boolean; version: string }) => void;
+      XFBML: {
+        parse: () => void;
+      };
+    };
+  }
+}
+
 const Footer: React.FC = () => {
   const [email, setEmail] = useState("");
   const [mailchimp, setMailChimp] = useState("");
@@ -22,21 +34,21 @@ const Footer: React.FC = () => {
   // Facebook SDK
   useEffect(() => {
     const loadFacebookSDK = () => {
-      if (!(window as any).FB) {
+      if (!window.FB) {
         const script = document.createElement("script");
         script.id = "facebook-jssdk";
         script.src = "https://connect.facebook.net/en_US/sdk.js";
         script.async = true;
         script.defer = true;
         script.onload = () => {
-          (window as any).FB.init({
+          window.FB.init({
             xfbml: true,
             version: "v15.0",
           });
         };
         document.body.appendChild(script);
       } else {
-        (window as any).FB.XFBML.parse();
+        window.FB.XFBML.parse();
       }
     };
     loadFacebookSDK();
@@ -65,8 +77,8 @@ const Footer: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    if ((window as any).FB) {
-      (window as any).FB.XFBML.parse();
+    if (window.FB) {
+      window.FB.XFBML.parse();
     }
   }, [facebookSrc]);
 
@@ -99,6 +111,8 @@ const Footer: React.FC = () => {
             src="/images/logo.png"
             alt="Elonatech Logo"
             className="w-20 mb-3"
+            width={80}
+            height={80}
           />
           <h3 className="font-bold">ELONATECH NIGERIA LIMITED</h3>
           <p className="mt-3 text-sm text-gray-300 leading-relaxed">
@@ -112,36 +126,48 @@ const Footer: React.FC = () => {
             <Link
               href="https://twitter.com/Elonatech"
               className="hover:text-red-500 transition"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <Twitter size={20} />
             </Link>
             <Link
               href="https://www.facebook.com/elonatech"
               className="hover:text-red-500 transition"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <Facebook size={20} />
             </Link>
             <Link
               href="https://www.instagram.com/elonatech"
               className="hover:text-red-500 transition"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <Instagram size={20} />
             </Link>
             <Link
               href="https://www.linkedin.com/company/elonatech/posts"
               className="hover:text-red-500 transition"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <Linkedin size={20} />
             </Link>
             <Link
               href="https://www.youtube.com/@elonatech"
               className="hover:text-red-500 transition"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <Youtube size={20} />
             </Link>
             <Link
               href="https://wa.me/message/NW4HSVIHRNRLA1"
               className="hover:text-red-500 transition"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <MessageCircle size={20} />
             </Link>
@@ -225,7 +251,7 @@ const Footer: React.FC = () => {
                 <Link href="/brand-identity">Brand Development</Link>
               </li>
               <li>
-                <Link href="/uiux">UI/UX & Prohreftyping</Link>
+                <Link href="/uiux">UI/UX & Prototyping</Link>
               </li>
               <li>
                 <Link href="/motion-graphics">Motion Graphics</Link>

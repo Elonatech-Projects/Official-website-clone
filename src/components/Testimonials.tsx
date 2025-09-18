@@ -151,6 +151,8 @@ const TestimonialsCarousel: React.FC = () => {
                 <div className="flex flex-col items-center text-center p-6 md:p-8 bg-white/5 rounded-xl backdrop-blur-md shadow-xl">
                   <div className="mb-5">
                     <Image
+                      width={200}
+                      height={200}
                       src={t.image}
                       alt={t.name}
                       className="w-24 h-24 md:w-28 md:h-28 rounded-full object-cover border-4 border-red-600"

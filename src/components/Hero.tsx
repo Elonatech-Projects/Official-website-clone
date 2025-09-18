@@ -103,6 +103,8 @@ const Hero = () => {
             {/* Background Image with gradient overlay */}
             <div className="absolute inset-0">
               <Image
+                width={200}
+                height={200}
                 src={slide.src}
                 className="w-full h-full object-cover"
                 alt={slide.alt}
