@@ -3,6 +3,7 @@ import ClientsCarousel from "@/components/Clients";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import ServicesGrid from "@/components/Services";
+import TestimonialsCarousel from "@/components/Testimonials";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         <ServicesGrid />
       </div>
       <ClientsCarousel />
+      <TestimonialsCarousel />
     </>
   );
 }
