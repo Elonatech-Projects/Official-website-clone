@@ -9,6 +9,7 @@ const Navbar = () => {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
+  // Effect to close dropdown on click outside
   useEffect(() => {
     if (!openDropdown) return;
 
@@ -54,9 +55,13 @@ const Navbar = () => {
         setOpenDropdown={setOpenDropdown}
       />
 
-      <Link href={"#"} className="hover:text-red-500 transition-colors">
-        Strategic Services
-      </Link>
+      <NavbarMenu
+        title="strategicServices"
+        displayName="Strategic Services"
+        openDropdown={openDropdown}
+        toggleDropdown={toggleDropdown}
+        setOpenDropdown={setOpenDropdown}
+      />
 
       <NavbarMenu
         title="products"
@@ -65,9 +70,14 @@ const Navbar = () => {
         setOpenDropdown={setOpenDropdown}
       />
 
-      <Link href={"#"} className="hover:text-red-500 transition-colors">
-        Who We Are
-      </Link>
+      <NavbarMenu
+        title="whoWeAre"
+        displayName="Who we are"
+        openDropdown={openDropdown}
+        toggleDropdown={toggleDropdown}
+        setOpenDropdown={setOpenDropdown}
+      />
+
       <Link href={"#"} className="hover:text-red-500 transition-colors">
         Get In Touch
       </Link>
